@@ -1,0 +1,16 @@
+@import 'colors';
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-family: 'Cinzel', serif;
+    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Spartan', sans-serif;
+    font-size: 13px;
+    background-color: $light-blue;
+}

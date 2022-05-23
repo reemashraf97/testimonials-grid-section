@@ -1,0 +1,101 @@
+@import 'body';
+@import 'colors';
+@import 'mixins';
+
+.container {
+    width: 80%;
+    margin: 10%;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(2, auto);
+    row-gap: 20px;
+    column-gap: 20px;
+    .cont-header {
+        display: flex;
+        flex-direction: row;
+        div {
+            margin-left: 15px;
+            margin-top: 3px;
+        }
+        img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+}
+    }
+}
+.first-header {
+    font-size: 14px;
+}
+.second-header {
+    font-size: 12px;
+    opacity: 0.5;
+}
+.first-para {
+    line-height: 1.5em;
+    font-size: 15px;
+}
+.second-para {
+    opacity: 0.7;
+    font-size: 12px;
+    line-height: 1.5em;
+}
+.card-1 {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+    position: relative;
+    @include box();
+    .first-header, .second-header, .first-para, .second-para {
+        @include header(light);
+    }
+    background-color: $violet;
+    background-image: url('../images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position-x: 83%;
+    .cont-header img {
+        border: 1px solid $light-gray;
+    }
+}
+.card-2 {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+    @include box();
+    .first-header, .second-header, .first-para, .second-para {
+        @include header(light);
+    }
+    background-color: $grayish-blue;
+}
+.card-5 {
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 2;
+    @include box();
+    .first-header, .second-header, .first-para, .second-para {
+        @include header(dark);
+    }
+    background-color: $white;
+}
+.card-3 {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    @include box();
+    .first-header, .second-header, .first-para, .second-para {
+        @include header(dark);
+    }
+    background-color: $white;
+}
+.card-4 {
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 1;
+    @include box();
+    .first-header, .second-header, .first-para, .second-para {
+        @include header(light);
+    }
+    background-color: $dark-blue;
+    .cont-header img {
+        border: 2px solid $violet;
+    }
+}

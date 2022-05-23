@@ -1,0 +1,21 @@
+@import "colors";
+
+@mixin header($color) {
+    @if $color == dark {
+        color: $dark-blue;
+    }
+    @else if $color == light {
+        color: $white;
+    }
+}
+@mixin box() {
+    padding: 40px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 10px 10px 20px $light-gray;
+}
+
